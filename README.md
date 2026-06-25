@@ -18,7 +18,7 @@ A nivel profesional me enfoco en el mundo del **DevOps y Cloud Engineering**, pe
 La página se encuentra desplegada de forma estática y automatizada a través de **GitHub Pages**. 
 
 Puedes ver el resultado en vivo aquí:
-https://codepen.io/CarlosM11/pen/RwLXmMd
+https://carlosmanuel13.github.io/portafolio-front-end/
 
 ---
 Producido con dedicación. ¡Gracias por pasarte!
