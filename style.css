@@ -89,7 +89,7 @@ html{
     animation-duration: 3s;
     animation-delay: 1.5s;
     animation-timing-function: ease;
-    text-shadow: 0px 1px 10px var(--led-color);
+    text-shadow: 1px 2px 0px black,3px 3px 0px rgba(255,255,255,1), 3px 3px 30px var(--led-color);
     
    
     
