@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+  
+  <section id="container">
+    <header>
+    <h1 id="title">Formulario</h1>
+    <p id="description">Practica de diseño de formulario</p>
+    </header>
+  
+  <form id="survey-form" action="POST">
+      <div class="form-group">
+       <label for="name" id="name-label">Nombre</label>
+      <input id="name" name="name" type="text" class="formulario"       placeholder="Coloca tu nombre aqui" required/>
+    </div>
+    
+    <div class="form-group">
+      <label for="email" id="email-label">Email</label>
+      <input id="email" name="email" type="email" class="formulario" placeholder="Coloca tu correo aqui" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="number" id="number-label">Edad<span class="opcional">(opcional)</span></label>
+      <input id="number" type="number" min="8" max="110" placeholder="Edad" class="formulario" />
+    </div>
+    <div class="form-group">
+      <p>¿Cual es tu Lenguaje Favorito?</p>
+      <select id="dropdown" name="dropdown" class="formulario" required>
+        <option disabled selected value>Selecciona una        
+         opción</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JAVASCRIPT</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <p>¿Cuales editores de texto haz usado?</p>
+      <label class="label-editor">
+      <input name="vim" value="vim" type="checkbox" class="input-checkbox"/>
+      Vim
+      </label>
+      <label class="label-editor">
+      <input name="sublimetext" value="sublime text" type="checkbox" class="input-checkbox"/>
+      Sublime Text
+      </label>
+      <label class="label-editor">
+      <input name="visualstudio" value="Visual Studio" type="checkbox" class="input-checkbox"/>
+      Visual Studio
+      </label>
+    </div>
+    <div class="form-group" id="r-contenedor">
+      <p>Aprender a Programar es </p>
+      
+      <div class="r-seccion">
+      <input id="r-facil" type="radio" name="dificultad" value="facil">
+      <label for="r-facil">Facil</label>
+      </div>
+      
+      <div class="r-seccion"> 
+      <input id="r-intermedio" type="radio" name="dificultad" value="intermedio">
+      <label for="r-intermedio">Intermedio</label>
+      </div>
+      
+      <div class="r-seccion"> 
+      <input type="radio" name="dificultad" id="r-dificil" value="dificil">
+      <label for="r-dificil">Dificil</label>
+      </div>
+    </div>
+    <div class="form-group" id="ultimo-contenedor">
+    <div class="form-group">
+      <p>Dejanos un comentario</p>
+      <textarea id="comentarios" class="input-textarea" name="comentario" placeholder="Escribe tu comentario..."></textarea>
+    </div>
+      <div class="red"></div>
+      <button type="submit" id="submit" class="boton-enviar">Enviar</button>
+    </div>
+  </form>
+  </section>
+  <footer>
+    <p>Carlos Manuel - Copyright &copy;<p>
+  </footer>
+ <script src="script.js"></script>
+ </body>
+</html>

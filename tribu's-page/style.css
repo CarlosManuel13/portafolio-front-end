@@ -1,0 +1,62 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+}
+#main {
+  background-color: #E3E4E5;
+  border-radius: 0.5em;
+  margin: 30px 0 30px 0;
+  display:grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  text-align:center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem 0;
+ }
+
+
+#img-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  
+}
+
+#image {
+  max-width: 700px;
+  height: auto;
+  
+}
+
+#img-caption {
+  margin: 20px 0 10px 0;
+}
+
+#cabecera-linea-temporal {
+  margin: 30px 0 3em 0;
+}
+#tribute-info{
+  display:grid;
+  justify-items: center;
+}
+#tribute-info ul {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-gap: 20px;
+  text-align: left;
+  text-align: justify;
+  
+  
+}
+
+#tribute-info li{
+  padding: 0 0 10px 0;
+  line-height: 1.6;
+  
+  
+}

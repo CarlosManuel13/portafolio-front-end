@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <title>Documentation Page (Ejercicio)</title>
+</head>
+<body>
+ <div id="container">
+  <div id="grid-container">
+    <nav id="navbar">
+      <header>CSS Documentation</header>
+      <ul class="nav-ul">
+        <li class="nav-li"><a href="#CSS_basics" class="nav-link"><span>CSS Basics</span></a></li> 
+        <li class="nav-li"><a href="#What_is_CSS?" class="nav-link">What is CSS?</a></li>
+        <li class="nav-li"><a href="#Anatomy_of_a_CSS_ruleset" class="nav-link">Anatomy of a CSS ruleset</a></li>
+        <li class="nav-li"><a href="#Selecting_multiple_elements" class="nav-link">Selecting multiple elements</a></li>
+        <li class="nav-li"><a href="#Different_types_of_selectors" class="nav-link">Different types of selectors</a></li>
+        <li class="nav-li"><a href="#Reference" class="nav-link">Reference</a></li>
+      </ul>
+        
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="CSS_basics">
+      <header>CSS basics</header>
+      <article>
+        <p><strong>CSS (Cascading Style Sheets)</strong> is the code that styles web content. CSS basics walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with background images and colors?</p>
+        </article>
+      </section>
+      <section class="main-section" id="What_is_CSS?">
+        <header>What is CSS?</header>
+        <article>
+          <p>Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:</p>
+          
+          <code class="code-box">
+            
+            <ul class="ul-code">
+              <li class="li-code"><p>p {</p></li>
+              <li class="li-code"><p>color: red;</p></li>
+              <li class="li-code"><p>}</p></li>
+            </ul>
+            
+          </code>
+          <p>Let's try it out! Using a text editor, paste the three lines of CSS (above) into a new file. Save the file as <code class="code-word">style.css</code> in a directory named <code class="code-word">styles</code>.</p>
+          <ul>
+            <li class="li-section">
+              <p>Open your <code class="code-word">index.html</code> file. Paste the following line in the head (between the <head> and </head> tags):</p>
+              <code class="code-box">
+                <span class="li-code">&lt;link href="styles/style.css" rel="stylesheet"&gt;</span>
+              </code>
+              
+            </li>
+            <li class="li-section">
+              <p>Save <code class="code-word">index.html</code> and load it in your browser. You should see something like this:</p>
+              <img class="img-w" src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png">
+              <p> If your paragraph text is red, congratulations! Your CSS is working.</p>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Anatomy_of_a_CSS_ruleset">
+        <header> Anatomy of a CSS ruleset</header>
+        <article>
+          <p>Let's dissect the CSS code for red paragraph text to understand how it works :</p>
+          <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" alt="foto-css-sintaxis">
+          <ul>
+            <li class="li-section">
+              <h3>Selector</h3>
+              <p>This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example, <code class="code-word">&lt;p&gt;</code> elements). To style a different element, change the selector.<code class="code-word">&lt;p&gt;</code>
+            </li>
+            <li class="li-section">
+              <h3>Declaration</h3>
+              <p>This is a single rule like color: red;. It specifies which of the element's properties you want to style.</p>
+            </li>
+            <li class="li-section">
+              <h3>Properties</h3>
+              <p>
+                These are ways in which you can style an HTML element. (In this example, <code class="code-word">color</code> is a property of the <code class="code-word">&lt;p&gt;</code> elements.) In CSS, you choose which properties you want to affect in the rule.
+              </p>
+            </li>
+            <li class="li-section">
+              <h3>Property value</h3>
+<p>To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many <code class="code-word">color</code> values in addition to <code class="code-word">red</code>.)</p>
+            </li>
+          </ul>
+          <p>Note the other important parts of the syntax:</p>
+          <ul>
+            <li class="li-section-without-marker">- Apart from the selector, each ruleset must be wrapped in curly braces. (<code class="code-word">{}</code>)</li>
+            <li class="li-section-without-marker">- Within each declaration, you must use a colon (<code class="code-word">:</code>) to separate the property from its value or values.</li>
+            <li class="li-section-without-marker">- Within each ruleset, you must use a semicolon (<code class="code-word">;</code>) to separate each declaration from the next one.</li>
+          </ul>
+          <p>To modify multiple property values in one ruleset, write them separated by semicolons, like this:</p>
+          <code class="code-box">
+            <ul>
+              <li class="li-code">p {</li>
+              <li class="li-code">color: red;</li>
+              <li class="li-code">width: 500px;</li>
+              <li class="li-code">border: 1px solid black;</li>
+              <li class="li-code">}</li>
+            </ul>
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Selecting_multiple_elements">
+        <header>Selecting multiple elements</header>
+        <article>
+          <p>You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:</p>
+          <code class="code-box">
+            <ul>
+              <li class="li-code">p, li, h1 {</li>
+              <li class="li-code">color: red;</li>
+              <li class="li-code">}</li>
+            </ul>
+          </code>
+          
+        </article>
+      </section>
+      <section class="main-section" id="Different_types_of_selectors">
+        <header>Different types of selectors</header>
+        <article>
+          <p>There are many different types of selectors. The examples above use element selectors, which select all elements of a given type. But we can make more specific selections as well. Here are some of the more common types of selectors:</p>
+          
+          
+        </article>
+        <div class="tabla">
+            <p>Selector name</p>
+            <p>What does it select</p>
+            <p>Example</p>
+            <p>Element selector (sometimes called a tag or type selector)</p>
+            <p>All HTML elements of the specified type.</p>
+            <p class="t-cont-code"><code class="code-table">p
+              {&lt;p&gt;}</code></p>
+            <p>ID selector</p>
+            <p>The element on the page with the specified ID. On a given HTML page, each id value should be unique.</p>
+            <p class="t-cont-code"><code class="code-table">#my-id <br>
+              selects &lt;p id="my-id"&gt; or &lt;a id="my-id"&gt;</code></p>
+            <p>Class selector</p>
+            <p>The element(s) on the page with the specified class. Multiple instances of the same class can appear on a page.</p>
+            <p class="t-cont-code"><code class="code-table">.my-class<br>
+              {&lt;p class="my-class"&gt; and &lt;a class="my-class"&gt;}</code></p>
+            <p>Attribute selector</p>
+            <p>The element(s) on the page with the specified attribute.</p>
+            <p class="t-cont-code"><code class="code-table">img[src]<br>
+              {&lt;img src="myimage.png"&gt; but not &lt;img&gt;}</code></p>
+            <p>Pseudo-class selector</p>
+            <p>The specified element(s), but only when in the specified state. (For example, when a cursor hovers over a link.)</p>
+            <p class="t-cont-code"><code class="code-table">a:hover<br>
+{ &lt;a&gt;, but only when the mouse pointer is hovering over the link.}</code></p>
+          </div>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li class="li-section-without-marker">All the documentation in this page is taken from <a target="target="_blank"" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#fonts_and_text">MDN</a></li>
+          </ul>
+        </article>
+      </section>
+        
+      </main>
+
+  </div>
+   <footer id="footer"><p>Diseño de Carlos Manuel &#169;</p></footer>
+  </div>
+    
+   
+ 
+  
+</body>
+</html>
+<!-- Contenido de la Pagina -->
+<!-- https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#fonts_and_text -->
